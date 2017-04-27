@@ -1,5 +1,4 @@
 # HttpServer
-# HttpServer的工具
 
 这是一个依赖NodeJS来构建HttpServer的工具，所以如果你还没安装NodeJS，请前往[NodeJS官网](https://nodejs.org/)下载并安装。
 

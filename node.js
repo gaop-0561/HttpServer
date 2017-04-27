@@ -3,7 +3,7 @@ var PORT = 3000;
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
-var mine = require('./mine').types;
+var mime = require('./mime').types;
 var path = require('path');
 
 var server = http.createServer(function (request, response) {
@@ -31,7 +31,7 @@ var server = http.createServer(function (request, response) {
 					});
 					response.end();
 				} else {
-					var contentType = mine[ext] || "text/plain";
+					var contentType = mime[ext] || "text/plain";
 					response.writeHead(200, {
 						'Content-Type': contentType
 					});

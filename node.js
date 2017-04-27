@@ -9,9 +9,10 @@ var path = require('path');
 var server = http.createServer(function (request, response) {
 	var pathname = url.parse(request.url).pathname;
 	// add default pathname -- index.html
-	if (pathname === '/') {
-		pathname = '/index.html';
-	}
+	if (pathname.charAt(pathname.length - 1) == "/") {
+            //如果访问目录
+            pathname += "index.html"; //指定为默认网页
+        }
 	
 	var realPath = path.join("assets", pathname);
 	var ext = path.extname(realPath);
